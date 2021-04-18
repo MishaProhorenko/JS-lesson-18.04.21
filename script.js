@@ -52,13 +52,24 @@ const otherDate = new Date(2008, 0, 3);
 // }
 // console.log(getLeapYear(2021))
 
-let getWeekDay = (date) => {
-    let tmpArr = date.split('-').reverse();
-    const currentDate = new Date(tmpArr);
-    let day = ['ВСКР', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ'];
-    const weekDay = currentDate.getDay();
-    return `${day[weekDay]}`;
+// let getWeekDay = (date) => {
+//     let tmpArr = date.split('-').reverse();
+//     const currentDate = new Date(tmpArr);
+//     let day = ['ВСКР', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ'];
+//     const weekDay = currentDate.getDay();
+//     return `${day[weekDay]}`;
+// }
+// console.log(getWeekDay('17-04-2021'))
+
+
+let getDaysDifference = (firstDate, secondDate) => {
+    let dateOne = +new Date(firstDate);
+    let dateTwo = +new Date(secondDate);
+    let result = Math.abs(dateTwo - dateOne)
+
+    let a = result / 86400000
+    return a
+
 }
-console.log(getWeekDay('17-04-2021'))
 
-
+console.log(getDaysDifference('2012-03-10', '2012-04-10'))
