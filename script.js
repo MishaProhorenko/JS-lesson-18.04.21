@@ -46,6 +46,13 @@ const otherDate = new Date(2008, 0, 3);
 // console.log(getCurrenDate())
 
 
+let getLeapYear = (year) => {
+    const date = new Date(year, 2, 0);
+   return date.getDate() === 29;
+}
+console.log(getLeapYear(2020))
+
+
 
 
 
