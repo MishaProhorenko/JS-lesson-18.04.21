@@ -46,13 +46,19 @@ const otherDate = new Date(2008, 0, 3);
 // console.log(getCurrenDate())
 
 
-let getLeapYear = (year) => {
-    const date = new Date(year, 2, 0);
-   return date.getDate() === 29;
+// let getLeapYear = (year) => {
+//     const date = new Date(year, 2, 0);
+//     return date.getDate() === 29;
+// }
+// console.log(getLeapYear(2021))
+
+let getWeekDay = (date) => {
+    let tmpArr = date.split('-').reverse();
+    const currentDate = new Date(tmpArr);
+    let day = ['ВСКР', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ'];
+    const weekDay = currentDate.getDay();
+    return `${day[weekDay]}`;
 }
-console.log(getLeapYear(2020))
-
-
-
+console.log(getWeekDay('17-04-2021'))
 
 
